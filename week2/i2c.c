@@ -36,6 +36,8 @@ void SendByte(unsigned char data) {
 unsigned char ReceiveAck(void)
 {
 	unsigned char ack;
+	SCL_low();
+	HAL_Delay(5);
 	SDA_High();
 	HAL_Delay(5);
 	SCL_High();
